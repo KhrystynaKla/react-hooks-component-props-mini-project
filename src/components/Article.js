@@ -1,25 +1,12 @@
-function Article({post}){
-    console.log(post)
-    let message;
-    if (post.minutes<30){
-        let cups=Math.ceil(post.minutes/5)
-        for (let i =0; i<cups; i++){
-            message += '☕️'; 
-        }
-    } else {
-        let cups=Math.ceil(post.minutes/10)
-        for (let i =0; i<cups; i++){
-            message += '🍱'; 
-        }
-    }
-
+import Message from "./Message"
+function Article(props){
+    const {id, title, date='January 1, 1970', preview, minutes}=props;
     return (
-      <article key = {post.id} className="Articles">
-        <h3>{post.title}</h3>
-        <small>{post.date="January 1, 1970"}</small>
-        <p>{message}
-        </p>
-        <p>{post.preview}</p>
+      <article key = {id} className="Articles">
+        <h3>{title}</h3>
+        <small>{date}</small>
+        <Message minutes={minutes}/>
+        <p>{preview}</p>
       </article>
     )
   

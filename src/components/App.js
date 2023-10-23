@@ -14,15 +14,13 @@ console.log(blogData);
 
 function App() {
   return (
-    <>
-    <Header props={blogData}/>
-    <About props={blogData}/>
-    <ArticleList props={blogData}/>
     <div className="App">
+      <Header props={blogData}/>
+      <About image={blogData.image} about={blogData.about}/>
+      <ArticleList posts={blogData.posts}/>
       You're on your own from here! Follow the deliverables; test things out in
       the browser as you write your code; and good luck!
     </div>
-    </>
   );
 }
 

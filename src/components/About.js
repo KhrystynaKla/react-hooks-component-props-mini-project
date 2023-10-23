@@ -1,16 +1,10 @@
-function About ({props}){
-    if (!props) {
-      return  <aside>
-                <img src='https://via.placeholder.com/215'></img>
-                <p>{props.about}</p>
-              </aside>
-    } else{
-      return  <aside>
-                <img src={props.image}></img>
-                <p>{props.about}</p>
-              </aside>
-  
-    } 
-  }
+function About (props){
+  const {image='https://via.placeholder.com/215', about}=props;
+  return  <aside>
+            <img src={image} alt ='blog logo'/>
+            <p>{about}</p>
+          </aside>
+
+} 
 
   export default About
