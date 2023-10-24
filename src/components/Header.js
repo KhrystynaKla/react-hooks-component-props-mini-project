@@ -1,8 +1,9 @@
 
 
-function Header (title){
+function Header (props){
+  
     return  <header>
-              <h1>{title.props.name}</h1>
+              <h1>{props.name}</h1>
             </header>
 }
 
